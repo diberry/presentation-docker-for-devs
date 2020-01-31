@@ -1,3 +1,11 @@
-## Docker terminal commands
-1. docker build -t demo1 .
-1. docker run --rm -e "FIRST=2" -e "SECOND=3" demo1
+## Create image from Dockerfile
+
+docker build --no-cache -t camp-demo-1 .
+
+## Run container from image without environment variables ( 2 + 2)
+
+docker run --rm camp-demo-1
+
+## Run container from image with environment variables, 3 + 3
+
+docker run --rm -e "FIRST=3" -e "SECOND=3" camp-demo-1
